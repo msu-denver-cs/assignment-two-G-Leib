@@ -4436,3 +4436,1249 @@ Processing by MakesController#search as HTML
 Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/cars" for 127.0.0.1 at 2019-10-19 13:56:45 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (82.2ms)
+Completed 200 OK in 213ms (Views: 195.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=windshield&commit=Search" for 127.0.0.1 at 2019-10-19 13:56:48 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"windshield", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (22.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (parts like '%windshield%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (26.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 22.2ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: parts: SELECT "cars".* FROM "cars" WHERE (parts like '%windshield%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_47123955847920'
+app/controllers/cars_controller.rb:68:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 13:58:13 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005182897360'
+app/controllers/cars_controller.rb:68:in `search'
+Started GET "/cars" for 127.0.0.1 at 2019-10-19 13:58:17 -0600
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 73ms (Views: 68.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 13:58:19 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005283088240'
+app/controllers/cars_controller.rb:68:in `search'
+Started GET "/cars" for 127.0.0.1 at 2019-10-19 13:59:12 -0600
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 67ms (Views: 59.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 13:59:15 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 13:59:17 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.2ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=1234567&commit=Search" for 127.0.0.1 at 2019-10-19 13:59:48 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"1234567", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%1234567%' OR vin like '%1234567%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.2ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 71ms (Views: 62.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 13:59:53 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%camry%' OR vin like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:01:09 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%'  OR make.name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make.name: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%'  OR make.name like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005287410100'
+app/controllers/cars_controller.rb:68:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:04:10 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `include' for #<CarsController:0x00007f56b42d0d40>):
+  
+app/controllers/cars_controller.rb:67:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:04:18 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `includes' for #<CarsController:0x00007f56c9792eb8>):
+  
+app/controllers/cars_controller.rb:67:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:04:27 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `includes' for #<CarsController:0x00007f56c0c6e828>):
+  
+app/controllers/cars_controller.rb:67:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:05:37 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `includes' for #<CarsController:0x00007f56c9968df0>):
+  
+app/controllers/cars_controller.rb:67:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:05:45 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%'  OR make like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%'  OR make like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005286437100'
+app/controllers/cars_controller.rb:71:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:05:58 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%'  OR make.name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make.name: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%'  OR make.name like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005283680960'
+app/controllers/cars_controller.rb:71:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:06:09 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 33ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:06:12 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:06:14 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%camry%' OR vin like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.2ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 56ms (Views: 52.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:08:14 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%camry%' OR vin like '%camry%' OR make.name like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: ambiguous column name: name: SELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%camry%' OR vin like '%camry%' OR make.name like '%camry%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_47123967610160'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:08:27 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%camry%' OR vin like '%camry%' OR makes.name like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: ambiguous column name: name: SELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%camry%' OR vin like '%camry%' OR makes.name like '%camry%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005361010560'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:09:02 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Can't join 'Car' to association named 'makes'; perhaps you misspelled it?):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005366659740'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:09:23 -0600
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/controllers/cars_controller.rb:70: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    render :index
+           ^):
+  
+app/controllers/cars_controller.rb:70: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:09:39 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%camry%' OR vin like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: ambiguous column name: name: SELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%camry%' OR vin like '%camry%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_47123969635420'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:11:58 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CarsController::Cars):
+  
+app/controllers/cars_controller.rb:67:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:12:06 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%camry%' OR vin like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: ambiguous column name: name: SELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%camry%' OR vin like '%camry%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005288127080'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:13:16 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%camry%' OR vin like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (Association named 'makes' was not found on Car; perhaps you misspelled it?):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005288343640'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:13:25 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%camry%' OR vin like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 65ms (Views: 56.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:13:30 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:13:45 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make.name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make.name: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make.name like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005361140540'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:13:53 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR makes.name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: makes.name: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR makes.name like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005356748300'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:14:07 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_47123970370720'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:14:28 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make.name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make.name: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make.name like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005184335520'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:14:33 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR makes.name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: makes.name: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR makes.name like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005182998260'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:09 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make_id like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:12 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make_id like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=1&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:14 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"1", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%1%' OR vin like '%1%' OR make_id like '%1%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.2ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=bmw&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:20 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"bmw", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%bmw%' OR vin like '%bmw%' OR make_id like '%bmw%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=bmw&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:26 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"bmw", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%bmw%' OR vin like '%bmw%' OR make_id.name like '%bmw%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make_id.name: SELECT "cars".* FROM "cars" WHERE (name like '%bmw%' OR vin like '%bmw%' OR make_id.name like '%bmw%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005285781320'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=bmw&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:41 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"bmw", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%bmw%' OR  make_id like '%bmw%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=1&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:43 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"1", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%1%' OR  make_id like '%1%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.2ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (56.9ms)
+Completed 200 OK in 105ms (Views: 100.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=2&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:45 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"2", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%2%' OR  make_id like '%2%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=3&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:46 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"3", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%3%' OR  make_id like '%3%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=3&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:48 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"3", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%3%' OR  make_id like '%3%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=4&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:49 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"4", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%4%' OR  make_id like '%4%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=5&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:53 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"5", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%5%' OR  make_id like '%5%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=6&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:55 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"6", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%6%' OR  make_id like '%6%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=3&commit=Search" for 127.0.0.1 at 2019-10-19 14:15:56 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"3", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%3%' OR  make_id like '%3%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=3&commit=Search" for 127.0.0.1 at 2019-10-19 14:16:55 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"3", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%3%' OR index_cars_on_make_id like '%3%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: index_cars_on_make_id: SELECT "cars".* FROM "cars" WHERE (name like '%3%' OR index_cars_on_make_id like '%3%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005364008260'
+app/controllers/cars_controller.rb:70:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=3&commit=Search" for 127.0.0.1 at 2019-10-19 14:18:53 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"3", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[35mSQL (0.6ms)[0m  [1m[34mSELECT "cars"."id" AS t0_r0, "cars"."name" AS t0_r1, "cars"."vin" AS t0_r2, "cars"."make_id" AS t0_r3, "cars"."created_at" AS t0_r4, "cars"."updated_at" AS t0_r5, "makes"."id" AS t1_r0, "makes"."name" AS t1_r1, "makes"."country" AS t1_r2, "makes"."created_at" AS t1_r3, "makes"."updated_at" AS t1_r4 FROM "cars" LEFT OUTER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%3%' OR vin like '%3%' OR make_id like '%3%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: ambiguous column name: name: SELECT "cars"."id" AS t0_r0, "cars"."name" AS t0_r1, "cars"."vin" AS t0_r2, "cars"."make_id" AS t0_r3, "cars"."created_at" AS t0_r4, "cars"."updated_at" AS t0_r5, "makes"."id" AS t1_r0, "makes"."name" AS t1_r1, "makes"."country" AS t1_r2, "makes"."created_at" AS t1_r3, "makes"."updated_at" AS t1_r4 FROM "cars" LEFT OUTER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%3%' OR vin like '%3%' OR make_id like '%3%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005358343580'
+app/controllers/cars_controller.rb:71:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=3&commit=Search" for 127.0.0.1 at 2019-10-19 14:19:10 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"3", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%3%' OR vin like '%3%' OR make_id like '%3%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 71ms (Views: 63.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=1&commit=Search" for 127.0.0.1 at 2019-10-19 14:19:15 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"1", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%1%' OR vin like '%1%' OR make_id like '%1%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.2ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:27:56 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make_id like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=1&commit=Search" for 127.0.0.1 at 2019-10-19 14:30:07 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"1", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%1%' OR vin like '%1%' OR make_id like '%1%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE "makes"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 83ms (Views: 74.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:30:10 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make_id like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:30:22 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make.name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: make.name: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make.name like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005285167340'
+app/controllers/cars_controller.rb:72:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:30:34 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR makes.name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: makes.name: SELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR makes.name like '%toyota%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005362578380'
+app/controllers/cars_controller.rb:72:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:30:49 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%toyota%' OR vin like '%toyota%' OR make_id like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 32ms (Views: 26.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=Toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:30:53 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%Toyota%' OR vin like '%Toyota%' OR make_id like '%Toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=BMW&commit=Search" for 127.0.0.1 at 2019-10-19 14:30:56 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"BMW", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (name like '%BMW%' OR vin like '%BMW%' OR make_id like '%BMW%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=BMW&commit=Search" for 127.0.0.1 at 2019-10-19 14:31:15 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"BMW", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "cars"."id" AS t0_r0, "cars"."name" AS t0_r1, "cars"."vin" AS t0_r2, "cars"."make_id" AS t0_r3, "cars"."created_at" AS t0_r4, "cars"."updated_at" AS t0_r5, "makes"."id" AS t1_r0, "makes"."name" AS t1_r1, "makes"."country" AS t1_r2, "makes"."created_at" AS t1_r3, "makes"."updated_at" AS t1_r4 FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%BMW%' OR vin like '%BMW%' OR make_id like '%BMW%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  Rendered cars/index.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: ambiguous column name: name: SELECT "cars"."id" AS t0_r0, "cars"."name" AS t0_r1, "cars"."vin" AS t0_r2, "cars"."make_id" AS t0_r3, "cars"."created_at" AS t0_r4, "cars"."updated_at" AS t0_r5, "makes"."id" AS t1_r0, "makes"."name" AS t1_r1, "makes"."country" AS t1_r2, "makes"."created_at" AS t1_r3, "makes"."updated_at" AS t1_r4 FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (name like '%BMW%' OR vin like '%BMW%' OR make_id like '%BMW%')):
+    21:   </thead>
+    22: 
+    23:   <tbody>
+    24:     <% @cars.each do |car| %>
+    25:       <tr>
+    26:         <td><%= car.name %></td>
+    27:         <td><%= car.vin %></td>
+  
+app/views/cars/index.html.erb:24:in `_app_views_cars_index_html_erb___3204617721917176191_70005355274900'
+app/controllers/cars_controller.rb:72:in `search'
+Started GET "/cars/search?utf8=%E2%9C%93&query=BMW&commit=Search" for 127.0.0.1 at 2019-10-19 14:31:28 -0600
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/controllers/cars_controller.rb:70: syntax error, unexpected '.', expecting keyword_end
+      .where("name like :search OR v...
+      ^):
+  
+app/controllers/cars_controller.rb:70: syntax error, unexpected '.', expecting keyword_end
+Started GET "/cars/search?utf8=%E2%9C%93&query=BMW&commit=Search" for 127.0.0.1 at 2019-10-19 14:31:50 -0600
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/controllers/cars_controller.rb:70: syntax error, unexpected '.', expecting keyword_end
+      .where("cars.name like :search...
+      ^):
+  
+app/controllers/cars_controller.rb:70: syntax error, unexpected '.', expecting keyword_end
+Started GET "/cars/search?utf8=%E2%9C%93&query=BMW&commit=Search" for 127.0.0.1 at 2019-10-19 14:32:08 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"BMW", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (cars.name like '%BMW%' OR vin like '%BMW%' OR makes.name like '%BMW%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 57ms (Views: 50.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=toyota&commit=Search" for 127.0.0.1 at 2019-10-19 14:32:11 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"toyota", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (cars.name like '%toyota%' OR vin like '%toyota%' OR makes.name like '%toyota%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=bmw&commit=Search" for 127.0.0.1 at 2019-10-19 14:32:14 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"bmw", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (cars.name like '%bmw%' OR vin like '%bmw%' OR makes.name like '%bmw%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=325&commit=Search" for 127.0.0.1 at 2019-10-19 14:32:17 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"325", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (cars.name like '%325%' OR vin like '%325%' OR makes.name like '%325%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars/search?utf8=%E2%9C%93&query=camry&commit=Search" for 127.0.0.1 at 2019-10-19 14:32:20 -0600
+Processing by CarsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"camry", "commit"=>"Search"}
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "makes" ON "makes"."id" = "cars"."make_id" WHERE (cars.name like '%camry%' OR vin like '%camry%' OR makes.name like '%camry%')[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
