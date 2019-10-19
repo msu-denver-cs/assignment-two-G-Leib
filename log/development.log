@@ -4394,3 +4394,45 @@ Processing by MakesController#search as HTML
 Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/makes/search?utf8=%E2%9C%93&query=germany&commit=Search" for 127.0.0.1 at 2019-10-19 13:54:11 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MakesController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"germany", "commit"=>"Search"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 2) in: name like ? or country like ?):
+  
+app/controllers/makes_controller.rb:65:in `search'
+Started GET "/makes/search?utf8=%E2%9C%93&query=germany&commit=Search" for 127.0.0.1 at 2019-10-19 13:55:15 -0600
+Processing by MakesController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"germany", "commit"=>"Search"}
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.2ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE (name like '%germany%' or country like '%germany%')[0m
+  ↳ app/views/makes/index.html.erb:19
+  Rendered makes/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 140ms (Views: 136.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/makes/search?utf8=%E2%9C%93&query=germany&commit=Search" for 127.0.0.1 at 2019-10-19 13:55:18 -0600
+Processing by MakesController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"germany", "commit"=>"Search"}
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.3ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE (name like '%germany%' or country like '%germany%')[0m
+  ↳ app/views/makes/index.html.erb:19
+  Rendered makes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/makes/search?utf8=%E2%9C%93&query=audi&commit=Search" for 127.0.0.1 at 2019-10-19 13:55:20 -0600
+Processing by MakesController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"audi", "commit"=>"Search"}
+  Rendering makes/index.html.erb within layouts/application
+  [1m[36mMake Load (0.3ms)[0m  [1m[34mSELECT "makes".* FROM "makes" WHERE (name like '%audi%' or country like '%audi%')[0m
+  ↳ app/views/makes/index.html.erb:19
+  Rendered makes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
