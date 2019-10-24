@@ -4,7 +4,7 @@
 
 <%= form_tag(search_cars_url, method: "get") do %>
   <%= label_tag(:query, "Search for:") %>
-  <%= text_field_tag(:query) %>
+  <%= text_field_tag :query, params[:query], data: {autocomplete: autocomplete_car_name_cars_path } %>
   <%= submit_tag("Search") %>
 <% end %>
 

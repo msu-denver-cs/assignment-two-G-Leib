@@ -1,4 +1,5 @@
 class MakesController < ApplicationController
+  autocomplete :make, :name
   before_action :set_make, only: [:show, :edit, :update, :destroy]
 
   # GET /makes
