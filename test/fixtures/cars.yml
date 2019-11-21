@@ -2,10 +2,24 @@
 
 one:
   name: MyString
-  vin: 1
+  vin: 1234567890
   make: one
 
-two:
+shortvin:
   name: MyString
-  vin: 1
-  make: two
+  vin: 123456789
+  make: one
+
+longvin:
+  name: MyString
+  vin: 12345678901
+  make: one
+
+alphavin:
+  name: MyString
+  vin: 123456789A
+  make: one
+
+noname:
+  vin: 1234567890
+  make: one

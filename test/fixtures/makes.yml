@@ -4,6 +4,9 @@ one:
   name: MyString
   country: MyString
 
-two:
-  name: MyString
+nocountry:
+  name: NoCountryForOldMakes
+
+noname:
   country: MyString
+

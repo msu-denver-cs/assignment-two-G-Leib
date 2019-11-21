@@ -8180,3 +8180,255 @@ Processing by CarsController#show as HTML
 Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/parts" for 127.0.0.1 at 2019-11-21 13:43:40 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (1.4ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:19
+  Rendered parts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 495ms (Views: 486.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:43:44 -0700
+Processing by PartsController#new as HTML
+  Rendering parts/new.html.erb within layouts/application
+  Rendered parts/_form.html.erb (10.4ms)
+  Rendered parts/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 204ms (Views: 196.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2019-11-21 13:43:51 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:19
+  Rendered parts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 170ms (Views: 168.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:43:55 -0700
+Processing by PartsController#new as HTML
+  Rendering parts/new.html.erb within layouts/application
+  Rendered parts/_form.html.erb (2.5ms)
+  Rendered parts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 162ms (Views: 159.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parts" for 127.0.0.1 at 2019-11-21 13:44:26 -0700
+Processing by PartsController#index as HTML
+  Rendering parts/index.html.erb within layouts/application
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts"[0m
+  ↳ app/views/parts/index.html.erb:19
+  Rendered parts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 172ms (Views: 169.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:46:42 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...ormat: { with: /\A[+-]?\d+\z/ }
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:47:24 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...format: { with: /\A[+]?\d+\z/ }
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:47:49 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...ce: true, format: /\A[+]?\d+\z/
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:47:50 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...ce: true, format: /\A[+]?\d+\z/
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:47:50 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...ce: true, format: /\A[+]?\d+\z/
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:47:50 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...ce: true, format: /\A[+]?\d+\z/
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:47:50 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...ce: true, format: /\A[+]?\d+\z/
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:49:44 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...esence: true, format: /\A\d+\z/
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:50:01 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...es :quantity, format: /\A\d+\z/
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:50:28 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...ty, format: { with: /\A\d+\z/ }
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:50:29 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...ty, format: { with: /\A\d+\z/ }
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:50:30 -0700
+  
+SyntaxError (/home/gil/Desktop/Class/MSU/S4_Fall19/CS3710_WebApplicationDevelopment/Assignments/assignment-two-G-Leib/app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+...ty, format: { with: /\A\d+\z/ }
+...                               ^):
+  
+app/models/part.rb:4: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/parts_controller.rb:2:in `<class:PartsController>'
+app/controllers/parts_controller.rb:1:in `<top (required)>'
+Started GET "/parts/new" for 127.0.0.1 at 2019-11-21 13:50:50 -0700
+Processing by PartsController#new as HTML
+  Rendering parts/new.html.erb within layouts/application
+  Rendered parts/_form.html.erb (2.3ms)
+  Rendered parts/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 165ms (Views: 151.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/parts" for 127.0.0.1 at 2019-11-21 13:50:59 -0700
+Processing by PartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HMweuFYOOXEQcmsbG2Wnjt/SiRO43XNIEpIu8H1zaTcoTdfGO4uln+v0iTYW3xftZSVVbL+xjDrR0vwrrR3tlQ==", "part"=>{"name"=>"brake light", "quantity"=>""}, "commit"=>"Create Part"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parts_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/parts_controller.rb:33
+  Rendering parts/new.html.erb within layouts/application
+  Rendered parts/_form.html.erb (2.0ms)
+  Rendered parts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 220ms (Views: 216.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/parts" for 127.0.0.1 at 2019-11-21 13:51:03 -0700
+Processing by PartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t2nfQWF76G1XVXBGdCXjDqKGaulqXjTZoRdJMhdwm++D6BY/DP50g6zTkmt5n1NtGHG2lm0yy6tiV5vpxx4fTQ==", "part"=>{"name"=>"brake light", "quantity"=>"0"}, "commit"=>"Create Part"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parts_controller.rb:33
+  [1m[36mPart Create (1.2ms)[0m  [1m[32mINSERT INTO "parts" ("name", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "brake light"], ["quantity", 0], ["created_at", "2019-11-21 20:51:03.736444"], ["updated_at", "2019-11-21 20:51:03.736444"]]
+  ↳ app/controllers/parts_controller.rb:33
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parts_controller.rb:33
+Redirected to http://localhost:3000/parts/6
+Completed 302 Found in 11ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/parts/6" for 127.0.0.1 at 2019-11-21 13:51:03 -0700
+Processing by PartsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/parts_controller.rb:75
+  Rendering parts/show.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "cars_parts" ON "cars"."id" = "cars_parts"."car_id" WHERE "cars_parts"."part_id" = ?[0m  [["part_id", 6]]
+  ↳ app/views/parts/show.html.erb:15
+  Rendered parts/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 165ms (Views: 160.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/parts/6/edit" for 127.0.0.1 at 2019-11-21 13:51:06 -0700
+Processing by PartsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/parts_controller.rb:75
+  Rendering parts/edit.html.erb within layouts/application
+  Rendered parts/_form.html.erb (2.6ms)
+  Rendered parts/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 157ms (Views: 154.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/parts/6" for 127.0.0.1 at 2019-11-21 13:51:18 -0700
+Processing by PartsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9swyScCZ1D+TL9+Z0DeFzBSQgQ+CtslBqZ/J95/S3fFyDKv6m9td7LtXMPp2fxC+xhdC9QQvIlOCdySV1q+HLg==", "part"=>{"name"=>"brake light", "quantity"=>"-3"}, "commit"=>"Update Part", "id"=>"6"}
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/parts_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parts_controller.rb:47
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/parts_controller.rb:47
+  Rendering parts/edit.html.erb within layouts/application
+  Rendered parts/_form.html.erb (3.1ms)
+  Rendered parts/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 168ms (Views: 163.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/parts/6" for 127.0.0.1 at 2019-11-21 13:51:30 -0700
+Processing by PartsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eRfFQzPtoe0h7SyAl/mpulZQthSVadb/c4lkOgvhbe1Nlgw9Xmg9A9przq2aQxnZ7Kdqa5IFKY2wybbh24/pTw==", "part"=>{"name"=>"brake light", "quantity"=>"3"}, "commit"=>"Update Part", "id"=>"6"}
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/parts_controller.rb:75
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/parts_controller.rb:47
+  [1m[36mPart Update (1.1ms)[0m  [1m[33mUPDATE "parts" SET "quantity" = ?, "updated_at" = ? WHERE "parts"."id" = ?[0m  [["quantity", 3], ["updated_at", "2019-11-21 20:51:30.719625"], ["id", 6]]
+  ↳ app/controllers/parts_controller.rb:47
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/parts_controller.rb:47
+Redirected to http://localhost:3000/parts/6
+Completed 302 Found in 12ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/parts/6" for 127.0.0.1 at 2019-11-21 13:51:30 -0700
+Processing by PartsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT  "parts".* FROM "parts" WHERE "parts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/parts_controller.rb:75
+  Rendering parts/show.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "cars_parts" ON "cars"."id" = "cars_parts"."car_id" WHERE "cars_parts"."part_id" = ?[0m  [["part_id", 6]]
+  ↳ app/views/parts/show.html.erb:15
+  Rendered parts/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 148ms (Views: 145.1ms | ActiveRecord: 0.3ms)
+
+

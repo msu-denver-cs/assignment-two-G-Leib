@@ -45,4 +45,5 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to cars_url
   end
+
 end
